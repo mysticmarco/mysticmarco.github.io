@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & ML Engineer Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
+        .dark .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            border: 1px solid rgba(55, 65, 81, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans antialiased selection:bg-brand-500 selection:text-white transition-colors duration-300">
+
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-card border-b border-slate-200/50 dark:border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center space-x-2 text-xl font-bold font-mono tracking-tight text-slate-900 dark:text-white">
+                    <span class="text-brand-600 dark:text-brand-500">&lt;</span>
+                    <span>ML.Dev</span>
+                    <span class="text-brand-600 dark:text-brand-500">/&gt;</span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#about" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">About</a>
+                    <a href="#skills" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Tech Stack</a>
+                    <a href="#projects" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Featured Projects</a>
+                    <a href="#demo" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Live Playground</a>
+                    <a href="#contact" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white rounded-lg focus:outline-none">
+                        <i data-lucide="sun" class="hidden dark:block w-5 h-5"></i>
+                        <i data-lucide="moon" class="block dark:hidden w-5 h-5"></i>
+                    </button>
+                    <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-sm transition-all duration-200 hover:shadow-brand-500/20">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 border border-brand-200 dark:border-brand-800">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse mr-2"></span>
+                        Available for AI / ML Engineering Roles
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                        Building Scalable <br class="hidden sm:inline" />
+                        <span class="gradient-text">AI Systems & Automations</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto lg:mx-0">
+                        Specializing in bridge engineering between classical machine learning workflows, Transformer models, microservice APIs, and production-grade automation pipelines.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#projects" class="w-full sm:w-auto px-6 py-3 text-base font-medium text-white bg-brand-600 hover:bg-brand-700 rounded-xl shadow-lg shadow-brand-500/25 transition-all text-center">
+                            Explore Projects
+                        </a>
+                        <a href="#demo" class="w-full sm:w-auto px-6 py-3 text-base font-medium text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 rounded-xl transition-all text-center flex items-center justify-center space-x-2">
+                            <i data-lucide="play-circle" class="w-5 h-5 text-brand-500"></i>
+                            <span>Interactive Model Sandbox</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Visual / Code Box -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-brand-500 to-purple-600 rounded-2xl blur-lg opacity-30 dark:opacity-40"></div>
+                        <div class="relative bg-slate-900 text-slate-100 rounded-2xl p-5 shadow-2xl border border-slate-800 font-mono text-xs sm:text-sm">
+                            <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-800 text-slate-400">
+                                <div class="flex space-x-1.5">
+                                    <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                                </div>
+                                <span>pipeline.py</span>
+                            </div>
+                            <pre class="overflow-x-auto"><code><span class="text-purple-400">from</span> transformers <span class="text-purple-400">import</span> pipeline
+<span class="text-purple-400">import</span> torch
+
+<span class="text-slate-500"># Load sentiment analysis model</span>
+classifier = pipeline(
+    <span class="text-emerald-300">"text-classification"</span>,
+    model=<span class="text-emerald-300">"distilbert-base-uncased"</span>
+)
+
+<span class="text-purple-400">def</span> <span class="text-blue-400">process_stream</span>(data_input):
+    results = classifier(data_input)
+    <span class="text-purple-400">return</span> {
+        <span class="text-emerald-300">"status"</span>: <span class="text-emerald-300">"processed"</span>,
+        <span class="text-emerald-300">"payload"</span>: results
+    }
+
+<span class="text-slate-500"># Output status: 200 OK</span></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-100/50 dark:bg-slate-900/40 border-y border-slate-200/60 dark:border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Engineering Philosophy</h2>
+                <div class="mt-2 h-1 w-12 bg-brand-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="w-12 h-12 bg-brand-100 dark:bg-brand-900/50 text-brand-600 dark:text-brand-400 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="cpu" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-slate-900 dark:text-white">Model Integration</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Experience leveraging open-source transformer architectures and LLMs through efficient fine-tuning and inference pipelines.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="workflow" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-slate-900 dark:text-white">Automation & Orchestration</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Designing n8n workflows and API hooks to connect language models seamlessly with external services and databases.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="code-2" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-slate-900 dark:text-white">Full-Stack Capability</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Combining backend Python logic with intuitive user-facing frontend interfaces to make ML insights immediately actionable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack / Skills -->
+    <section id="skills" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Technical Toolkit</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-2">Core frameworks and tools used across my AI/ML workflow.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- Python -->
+                <div class="p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-center hover:border-brand-500 transition-colors">
+                    <i data-lucide="terminal" class="w-8 h-8 mx-auto text-brand-500 mb-2"></i>
+                    <h4 class="font-semibold text-sm">Python</h4>
+                    <span class="text-xs text-slate-500">Core Language</span>
+                </div>
+                <!-- PyTorch -->
+                <div class="p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-center hover:border-orange-500 transition-colors">
+                    <i data-lucide="flame" class="w-8 h-8 mx-auto text-orange-500 mb-2"></i>
+                    <h4 class="font-semibold text-sm">PyTorch</h4>
+                    <span class="text-xs text-slate-500">Deep Learning</span>
+                </div>
+                <!-- Hugging Face -->
+                <div class="p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-center hover:border-yellow-500 transition-colors">
+                    <i data-lucide="smile" class="w-8 h-8 mx-auto text-yellow-500 mb-2"></i>
+                    <h4 class="font-semibold text-sm">Hugging Face</h4>
+                    <span class="text-xs text-slate-500">NLP & Models</span>
+                </div>
+                <!-- Scikit-Learn -->
+                <div class="p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-center hover:border-blue-500 transition-colors">
+                    <i data-lucide="bar-chart-3" class="w-8 h-8 mx-auto text-blue-500 mb-2"></i>
+                    <h4 class="font-semibold text-sm">Scikit-Learn</h4>
+                    <span class="text-xs text-slate-500">Tabular ML</span>
+                </div>
+                <!-- n8n -->
+                <div class="p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-center hover:border-rose-500 transition-colors">
+                    <i data-lucide="git-fork" class="w-8 h-8 mx-auto text-rose-500 mb-2"></i>
+                    <h4 class="font-semibold text-sm">n8n Workflow</h4>
+                    <span class="text-xs text-slate-500">Automation</span>
+                </div>
+                <!-- REST APIs -->
+                <div class="p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-center hover:border-emerald-500 transition-colors">
+                    <i data-lucide="network" class="w-8 h-8 mx-auto text-emerald-500 mb-2"></i>
+                    <h4 class="font-semibold text-sm">REST / Webhooks</h4>
+                    <span class="text-xs text-slate-500">Integrations</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-100/50 dark:bg-slate-900/40 border-y border-slate-200/60 dark:border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Featured Projects</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mt-2">Engineering solutions across Natural Language Processing and API workflows.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400 text-xs font-semibold rounded-full">NLP / Hugging Face</span>
+                            <div class="flex space-x-2">
+                                <a href="#" class="p-1.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"><i data-lucide="github" class="w-5 h-5"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Automated Sentiment & Keyword Extraction Pipeline</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+                            Integrated Hugging Face Transformer models with a Python API endpoint to evaluate text input, calculate sentiment confidence scores, and extract entity tags.
+                        </p>
+                        <div class="bg-slate-950 p-4 rounded-xl text-slate-200 font-mono text-xs overflow-x-auto mb-4">
+                            <span class="text-purple-400">from</span> transformers <span class="text-purple-400">import</span> AutoTokenizer, AutoModelForSequenceClassification
+                            <br>
+                            tokenizer = AutoTokenizer.from_pretrained(<span class="text-emerald-300">"distilbert-base-uncased"</span>)
+                        </div>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-500">
+                            <span class="bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded">PyTorch</span>
+                            <span class="bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded">Hugging Face</span>
+                            <span class="bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded">FastAPI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-purple-50 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400 text-xs font-semibold rounded-full">Orchestration & AI</span>
+                            <div class="flex space-x-2">
+                                <a href="#" class="p-1.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"><i data-lucide="github" class="w-5 h-5"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">n8n AI Workflow Data Enrichment</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+                            Designed an autonomous data-parsing pipeline using n8n to connect external API endpoints with LLM nodes for real-time document summarization and structuring.
+                        </p>
+                        <div class="bg-slate-950 p-4 rounded-xl text-slate-200 font-mono text-xs overflow-x-auto mb-4">
+                            <span class="text-slate-500">// Webhook listener -> LLM Chain node</span><br>
+                            POST /webhook/ai-process -> Format JSON -> Response (200 OK)
+                        </div>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-500">
+                            <span class="bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded">n8n</span>
+                            <span class="bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded">OpenAI API</span>
+                            <span class="bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded">JSON/Webhooks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section id="demo" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Interactive Model Sandbox</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-2">Test a mock NLP classification inference pipeline directly on this page.</p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-xl">
+                <div class="mb-4">
+                    <label for="demo-input" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Input Text for Sentiment Analysis</label>
+                    <textarea id="demo-input" rows="3" class="w-full p-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none transition-all" placeholder="Enter text (e.g., 'The model integration was incredibly fast and seamlessly scaled!')..."></textarea>
+                </div>
+
+                <button id="run-demo-btn" onclick="runInferenceDemo()" class="w-full sm:w-auto px-6 py-2.5 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-xl flex items-center justify-center space-x-2 transition-all">
+                    <i data-lucide="play" class="w-4 h-4"></i>
+                    <span>Run Model Inference</span>
+                </button>
+
+                <!-- Interactive Results Output -->
+                <div id="demo-output" class="hidden mt-6 p-4 rounded-xl bg-slate-950 text-slate-100 font-mono text-sm space-y-3">
+                    <div class="flex items-center justify-between text-xs text-slate-400 border-b border-slate-800 pb-2">
+                        <span>MODEL OUTPUT (Inference latency: <span id="latency-val" class="text-emerald-400">14ms</span>)</span>
+                        <span class="text-emerald-400 flex items-center"><i data-lucide="check-circle" class="w-3 h-3 mr-1"></i> STATUS 200</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-400">Label:</span> <span id="output-label" class="text-emerald-400 font-bold">POSITIVE</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-400">Confidence Score:</span> <span id="output-score" class="text-brand-400">0.9842</span>
+                    </div>
+                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                        <div id="output-bar" class="bg-brand-500 h-full transition-all duration-500" style="width: 98%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-100/50 dark:bg-slate-900/40 border-t border-slate-200/60 dark:border-slate-800/60">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Let's Connect</h2>
+            <p class="text-slate-600 dark:text-slate-400 mb-8">Interested in discussing AI engineering, fine-tuning, or automation pipeline deployment?</p>
+            
+            <form onsubmit="event.preventDefault(); handleFormSubmit();" class="space-y-4 text-left">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Your Name" required class="w-full p-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                    <input type="email" placeholder="Your Email" required class="w-full p-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                </div>
+                <textarea rows="4" placeholder="Your Message" required class="w-full p-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none"></textarea>
+                <button type="submit" class="w-full py-3 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-xl transition-colors shadow-lg shadow-brand-500/20">
+                    Send Message
+                </button>
+            </form>
+            <div id="contact-feedback" class="hidden mt-4 p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-sm">
+                Thank you! Your message has been noted.
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500">
+        <p>© 2026 AI & ML Engineer Portfolio. Designed for production readiness.</p>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Dark Theme Toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // Interactive Model Demo logic
+        function runInferenceDemo() {
+            const input = document.getElementById('demo-input').value.trim();
+            const output = document.getElementById('demo-output');
+            const labelEl = document.getElementById('output-label');
+            const scoreEl = document.getElementById('output-score');
+            const barEl = document.getElementById('output-bar');
+            const latencyEl = document.getElementById('latency-val');
+
+            if (!input) {
+                alert("Please enter text in the box to run the inference demo.");
+                return;
+            }
+
+            // Simple heuristic to mock model inference
+            const isNegative = input.toLowerCase().includes('bad') || input.toLowerCase().includes('slow') || input.toLowerCase().includes('error');
+            const score = (Math.random() * 0.15 + 0.84).toFixed(4);
+            const latency = Math.floor(Math.random() * 15 + 8);
+
+            latencyEl.innerText = `${latency}ms`;
+
+            if (isNegative) {
+                labelEl.innerText = 'NEGATIVE';
+                labelEl.className = 'text-red-400 font-bold';
+                barEl.className = 'bg-red-500 h-full transition-all duration-500';
+            } else {
+                labelEl.innerText = 'POSITIVE';
+                labelEl.className = 'text-emerald-400 font-bold';
+                barEl.className = 'bg-brand-500 h-full transition-all duration-500';
+            }
+
+            scoreEl.innerText = score;
+            barEl.style.width = `${Math.floor(score * 100)}%`;
+
+            output.classList.remove('hidden');
+        }
+
+        // Contact Form Feedback Handler
+        function handleFormSubmit() {
+            const feedback = document.getElementById('contact-feedback');
+            feedback.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
